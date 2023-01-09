@@ -1227,3 +1227,761 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
+/*--------------------------------------------------------------
+# Extra - Joel
+--------------------------------------------------------------*/
+
+ /* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eeeeee;
+  color: #444444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+} 
+
+/*  --------------------------------------------------
+ :: Accordion from https://codepen.io/TurboTodd2k/pen/zxWBzK
+ -------------------------------------------------- */
+
+ /* Responsive iframe */
+ .responsive-iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+<style type="text/css">
+/*  --------------------------------------------------
+ :: Accordion
+ -------------------------------------------------- */
+
+.dt-accordion {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.dt-accordion input {
+	position: absolute;
+	display: none;
+}
+
+.dt-accordion label {
+	display: block;
+	position: relative;
+	padding: 18px 25px;
+	margin: 0 0 4px 0;
+	color: #5f564a;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	z-index: 999;
+	cursor: pointer;
+}
+
+.dt-accordion label i {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	vertical-align: baseline;
+	margin-right: 10px;
+}
+
+.dt-accordion div.dt-accordion-label label span.dt-drop-icon:before {
+	font-family: 'icomoon-ultimate';
+	content: "\e113";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	vertical-align: baseline;
+	float: right;
+	margin: -2px 0 0 0;
+}
+
+.dt-accordion > div.dt-accordion-label > input.dt-tab-2:checked ~ label span.dt-drop-icon:before {
+	font-family: 'icomoon-ultimate';
+	content: "\e111";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	vertical-align: baseline;
+	float: right;
+	margin: -2px 0 0 0;
+}
+/*  --------------------------------------------------
+ :: Sections
+ -------------------------------------------------- */
+
+.dt-accordion ul.dt-accordion-section-two {
+	position: relative;
+	margin: 10px 0 0 0;
+	line-height: 1;
+	padding: 0;
+	border: none;
+	z-index: 99;
+	text-align: left;
+	list-style: none;
+	width: 100%;
+}
+
+.dt-accordion ul.dt-accordion-section-two li {
+	position: relative;
+	line-height: 1;
+	margin: 0;
+}
+
+.dt-accordion ul.dt-accordion-section-two li a {
+	display: block;
+	font-style: normal;
+	font-weight: normal;
+	font-family: "Open Sans";
+	font-size: 13px;
+	padding: 18px 25px;
+	text-decoration: none;
+	border: none;
+	color: #777;
+}
+
+.dt-accordion ul.dt-accordion-section-two i {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	vertical-align: baseline;
+	margin-right: 10px;
+}
+
+.dt-accordion > div.dt-accordion-label ul.dt-accordion-section-two {
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+}
+/*  --------------------------------------------------
+    :: Accordion Dark Colors Orange
+    -------------------------------------------------- */
+
+.dt-accordion-orange > div.dt-accordion-label label,
+.dt-toogle-orange > div.dt-toogle-label label {
+	cursor: pointer;
+	background-color: #EFF3F7;
+}
+
+.dt-accordion-label {
+	text-align: center;
+}
+
+.dt-accordion-label p {
+	margin: 0;
+}
+
+.dt-accordion-label h2 {
+	padding: 0;
+	font-size: 26px;
+}
+
+.dt-wrapper {
+	margin-bottom: 19px;
+}
+/*Video Container*/
+
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	/*max-width: 560px;*/
+	
+	height: auto;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+iframe {
+	display: block;
+}
+/*end Video Container*/
+
+@media (min-width: 641px) {
+
+    .dt-accordion > div.dt-accordion-label > input.dt-tab-2:checked + label ul.dt-accordion-section-two {
+        width: 100%;
+        padding-bottom: 60.25%;
+    }
+}
+@media only screen and (min-width: 240px) and (max-width: 640px) {
+
+    .dt-accordion > div.dt-accordion-label > input.dt-tab-2:checked + label ul.dt-accordion-section-two {
+        width: 100%;
+        padding-bottom: 67.5%;
+    }
+}
+
+/* --------------------------------------------------
+ :: Accordion2
+ -------------------------------------------------- */
+
+.dt-accordion2 {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.dt-accordion2 input {
+	position: absolute;
+	display: none;
+}
+
+.dt-accordion2 label {
+	display: block;
+	position: relative;
+	padding: 18px 25px;
+	margin: 0 0 4px 0;
+	color: #5f564a;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	z-index: 999;
+	cursor: pointer;
+}
+
+.dt-accordion2 label i {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	vertical-align: baseline;
+	margin-right: 10px;
+}
+
+.dt-accordion2 div.dt-accordion2-label label span.dt-drop-icon:before {
+	font-family: 'icomoon-ultimate';
+	content: "\e113";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	vertical-align: baseline;
+	float: right;
+	margin: -2px 0 0 0;
+}
+
+.dt-accordion2 > div.dt-accordion2-label > input.dt-tab-2:checked ~ label span.dt-drop-icon:before {
+	font-family: 'icomoon-ultimate';
+	content: "\e111";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	vertical-align: baseline;
+	float: right;
+	margin: -2px 0 0 0;
+}
+/*  --------------------------------------------------
+ :: Sections
+ -------------------------------------------------- */
+
+.dt-accordion2 ul.dt-accordion2-section-two {
+	position: relative;
+	margin: 10px 0 0 0;
+	line-height: 1;
+	padding: 0;
+	border: none;
+	z-index: 99;
+	text-align: left;
+	list-style: none;
+	width: 100%;
+}
+
+.dt-accordion2 ul.dt-accordion2-section-two li {
+	position: relative;
+	line-height: 1;
+	margin: 0;
+}
+
+.dt-accordion2 ul.dt-accordion2-section-two li a {
+	display: block;
+	font-style: normal;
+	font-weight: normal;
+	font-family: "Open Sans";
+	font-size: 13px;
+	padding: 18px 25px;
+	text-decoration: none;
+	border: none;
+	color: #777;
+}
+
+.dt-accordion2 ul.dt-accordion2-section-two i {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	vertical-align: baseline;
+	margin-right: 10px;
+}
+
+.dt-accordion2 > div.dt-accordion2-label ul.dt-accordion2-section-two {
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+}
+/*  --------------------------------------------------
+    :: Accordion Dark Colors Orange
+    -------------------------------------------------- */
+
+.dt-accordion2-orange > div.dt-accordion2-label label,
+.dt-toogle-orange > div.dt-toogle-label label {
+	cursor: pointer;
+	background-color: #EFF3F7;
+}
+
+.dt-accordion2-label {
+	text-align: center;
+}
+
+.dt-accordion2-label p {
+	margin: 0;
+}
+
+.dt-accordion2-label h2 {
+	padding: 0;
+	font-size: 26px;
+}
+
+.dt-wrapper {
+	margin-bottom: 19px;
+}
+/*Video Container*/
+
+.embed-container2 {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	/*max-width: 560px;*/
+	
+	height: auto;
+}
+.embed-container2 iframe,
+.embed-container2 object,
+.embed-container2 embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+iframe {
+	display: block;
+}
+/*end Video Container*/
+
+@media (min-width: 641px) {
+
+    .dt-accordion2 > div.dt-accordion2-label > input.dt-tab-2:checked + label ul.dt-accordion2-section-two {
+        width: 100%;
+        padding-bottom: 60.25%;
+    }
+}
+@media only screen and (min-width: 240px) and (max-width: 640px) {
+
+    .dt-accordion2 > div.dt-accordion2-label > input.dt-tab-2:checked + label ul.dt-accordion2-section-two {
+        width: 100%;
+        padding-bottom: 67.5%;
+    }
+}
+
+/* --------------------------------------------------
+ :: Accordion3
+ -------------------------------------------------- */
+
+ .dt-accordion3 {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.dt-accordion3 input {
+	position: absolute;
+	display: none;
+}
+
+.dt-accordion3 label {
+	display: block;
+	position: relative;
+	padding: 18px 25px;
+	margin: 0 0 4px 0;
+	color: #5f564a;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	z-index: 999;
+	cursor: pointer;
+}
+
+.dt-accordion3 label i {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	vertical-align: baseline;
+	margin-right: 10px;
+}
+
+.dt-accordion3 div.dt-accordion3-label label span.dt-drop-icon:before {
+	font-family: 'icomoon-ultimate';
+	content: "\e113";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	vertical-align: baseline;
+	float: right;
+	margin: -2px 0 0 0;
+}
+
+.dt-accordion3 > div.dt-accordion3-label > input.dt-tab-2:checked ~ label span.dt-drop-icon:before {
+	font-family: 'icomoon-ultimate';
+	content: "\e111";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	vertical-align: baseline;
+	float: right;
+	margin: -2px 0 0 0;
+}
+/*  --------------------------------------------------
+ :: Sections
+ -------------------------------------------------- */
+
+.dt-accordion3 ul.dt-accordion3-section-two {
+	position: relative;
+	margin: 10px 0 0 0;
+	line-height: 1;
+	padding: 0;
+	border: none;
+	z-index: 99;
+	text-align: left;
+	list-style: none;
+	width: 100%;
+}
+
+.dt-accordion3 ul.dt-accordion3-section-two li {
+	position: relative;
+	line-height: 1;
+	margin: 0;
+}
+
+.dt-accordion3 ul.dt-accordion3-section-two li a {
+	display: block;
+	font-style: normal;
+	font-weight: normal;
+	font-family: "Open Sans";
+	font-size: 13px;
+	padding: 18px 25px;
+	text-decoration: none;
+	border: none;
+	color: #777;
+}
+
+.dt-accordion3 ul.dt-accordion3-section-two i {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	vertical-align: baseline;
+	margin-right: 10px;
+}
+
+.dt-accordion3 > div.dt-accordion3-label ul.dt-accordion3-section-two {
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+}
+/*  --------------------------------------------------
+    :: Accordion Dark Colors Orange
+    -------------------------------------------------- */
+
+.dt-accordion3-orange > div.dt-accordion3-label label,
+.dt-toogle-orange > div.dt-toogle-label label {
+	cursor: pointer;
+	background-color: #EFF3F7;
+}
+
+.dt-accordion3-label {
+	text-align: center;
+}
+
+.dt-accordion3-label p {
+	margin: 0;
+}
+
+.dt-accordion3-label h2 {
+	padding: 0;
+	font-size: 26px;
+}
+
+.dt-wrapper {
+	margin-bottom: 19px;
+}
+/*Video Container*/
+
+.embed-container3 {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	/*max-width: 560px;*/
+	
+	height: auto;
+}
+.embed-container3 iframe,
+.embed-container3 object,
+.embed-container3 embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+iframe {
+	display: block;
+}
+/*end Video Container*/
+
+@media (min-width: 641px) {
+
+    .dt-accordion3 > div.dt-accordion3-label > input.dt-tab-2:checked + label ul.dt-accordion3-section-two {
+        width: 100%;
+        padding-bottom: 60.25%;
+    }
+}
+@media only screen and (min-width: 240px) and (max-width: 640px) {
+
+    .dt-accordion3 > div.dt-accordion3-label > input.dt-tab-2:checked + label ul.dt-accordion3-section-two {
+        width: 100%;
+        padding-bottom: 67.5%;
+    }
+}
+
+/* --------------------------------------------------
+ :: Accordion3
+ -------------------------------------------------- */
+
+ .dt-accordion4 {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.dt-accordion4 input {
+	position: absolute;
+	display: none;
+}
+
+.dt-accordion4 label {
+	display: block;
+	position: relative;
+	padding: 18px 25px;
+	margin: 0 0 4px 0;
+	color: #5f564a;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	z-index: 999;
+	cursor: pointer;
+}
+
+.dt-accordion4 label i {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	vertical-align: baseline;
+	margin-right: 10px;
+}
+
+.dt-accordion4 div.dt-accordion4-label label span.dt-drop-icon:before {
+	font-family: 'icomoon-ultimate';
+	content: "\e113";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	vertical-align: baseline;
+	float: right;
+	margin: -2px 0 0 0;
+}
+
+.dt-accordion4 > div.dt-accordion4-label > input.dt-tab-2:checked ~ label span.dt-drop-icon:before {
+	font-family: 'icomoon-ultimate';
+	content: "\e111";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	vertical-align: baseline;
+	float: right;
+	margin: -2px 0 0 0;
+}
+/*  --------------------------------------------------
+ :: Sections
+ -------------------------------------------------- */
+
+.dt-accordion4 ul.dt-accordion4-section-two {
+	position: relative;
+	margin: 10px 0 0 0;
+	line-height: 1;
+	padding: 0;
+	border: none;
+	z-index: 99;
+	text-align: left;
+	list-style: none;
+	width: 100%;
+}
+
+.dt-accordion4 ul.dt-accordion4-section-two li {
+	position: relative;
+	line-height: 1;
+	margin: 0;
+}
+
+.dt-accordion4 ul.dt-accordion4-section-two li a {
+	display: block;
+	font-style: normal;
+	font-weight: normal;
+	font-family: "Open Sans";
+	font-size: 13px;
+	padding: 18px 25px;
+	text-decoration: none;
+	border: none;
+	color: #777;
+}
+
+.dt-accordion4 ul.dt-accordion4-section-two i {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	vertical-align: baseline;
+	margin-right: 10px;
+}
+
+.dt-accordion4 > div.dt-accordion4-label ul.dt-accordion4-section-two {
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+}
+/*  --------------------------------------------------
+    :: Accordion Dark Colors Orange
+    -------------------------------------------------- */
+
+.dt-accordion4-orange > div.dt-accordion4-label label,
+.dt-toogle-orange > div.dt-toogle-label label {
+	cursor: pointer;
+	background-color: #EFF3F7;
+}
+
+.dt-accordion4-label {
+	text-align: center;
+}
+
+.dt-accordion4-label p {
+	margin: 0;
+}
+
+.dt-accordion4-label h2 {
+	padding: 0;
+	font-size: 26px;
+}
+
+.dt-wrapper {
+	margin-bottom: 19px;
+}
+/*Video Container*/
+
+.embed-container4 {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	/*max-width: 560px;*/
+	
+	height: auto;
+}
+.embed-container4 iframe,
+.embed-container4 object,
+.embed-container4 embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+iframe {
+	display: block;
+}
+/*end Video Container*/
+
+@media (min-width: 641px) {
+
+    .dt-accordion4 > div.dt-accordion4-label > input.dt-tab-2:checked + label ul.dt-accordion4-section-two {
+        width: 100%;
+        padding-bottom: 60.25%;
+    }
+}
+@media only screen and (min-width: 240px) and (max-width: 640px) {
+
+    .dt-accordion4 > div.dt-accordion4-label > input.dt-tab-2:checked + label ul.dt-accordion4-section-two {
+        width: 100%;
+        padding-bottom: 67.5%;
+    }
+}
