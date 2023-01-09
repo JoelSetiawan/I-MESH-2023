@@ -944,6 +944,19 @@ section {
   margin-bottom: 40px;
 }
 
+.testimonials .button {
+  background: #0563bb;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.testimonials .button:hover {
+  background: #0678e3;
+}
+
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
